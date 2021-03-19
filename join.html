@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김지혜 포폴2</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/animate.css">
+
+    <link rel="stylesheet" href="css/jquery-ui.css">
+
+    <link rel="stylesheet" href="./css/join.css">
+    <link rel="stylesheet" href="./css/rwdindex.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+
+</head>
+
+<body>
+    <header id="header">
+        <div class="outer">
+            <div class="row cf">
+                <div class="sns">
+                    <a href="tel:031-1234-5678"><i class="fas fa-phone-alt"></i>&nbsp;&nbsp;031-1234-5678</a>
+                    <a href="#none"><i class="fab fa-instagram"></i><span class="blind">인스타그램</span></a>
+                    <a href="#none"><i class="fas fa-comment-dots"></i><span class="blind">카카오톡</span></a>
+                </div>
+                <div class="membership">
+                    <a href="login.html">로그인</a>
+                    <a href="join.html">회원가입</a>
+                    <a href="board.html">게시판</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row cf" >
+            <h1 id="home"><a href="index.html">Cube D box Style</a></h1>
+            <p class="hambar"><i class="fas fa-bars"></i></p>
+
+
+
+            <div class="nav">
+                <ul class="depth1 cf" >
+                    <li><a href="index.html#about">ABOUT</a></li>
+                    <li><a href="index.html#works">WORKS</a></li>
+                    <li><a href="index.html#services">SERVICES</a></li>
+                    <li><a href="index.html#interior">INTERIOR</a></li>
+                    <li><a href="index.html#contact">CONTACT</a></li>
+                </ul>
+            </div> 
+        </div>
+
+
+
+    </header>
+    <section id="section">
+        <div class="article1 ">
+            <div class="slide-group">
+                <div class="slide slide1">
+                    <div class="row">
+                        <div class="main_txt">
+                            Creative Design Group<br>
+                            <span>CUBEDBOX STYLE</span>
+                        </div>
+                    </div>
+                </div>
+            
+            
+                <div class="slide slide2">
+                    <div class="row">
+                        <div class="main_txt">
+                            Creative Design Group<br>
+                            <span>CUBEDBOX STYLE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="joinbox row">
+            <h2>회원가입</h2>
+            <form action="#none" method="post">
+            <fieldset>
+                    <legend>기본정보</legend>
+                    <h3>기본정보</h3>
+                    <table>
+                        <colgroup>
+                        <col>
+                        <col>
+                        </colgroup>
+                        <tbody>
+                            <tr>
+                                <th><label for="idbox">아이디</label></th>
+                                <td>
+                                    <input type="text" id="idbox" name="idbox">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="pwbox">비밀번호</label></th>
+                                <td>
+                                    <input type="password" id="pwbox" name="pwbox"  placeholder="비밀번호 첫글자는 영문자이고, 숫자, 특수문자중 2가지 이상 조합해야 함">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="irum">이름</label></th>
+                                <td>
+                                    <input type="text" id="irum" name="irum">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th rowspan="3"><label for="zipcode">주소</label></th>
+                                <td>
+                                    <input type="text" id="zipcode" name="zipcode">
+                                    <button type="button" onclick="kim()">우편번호</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" id="addr1" name="addr1"> 도로명주소
+                                    <input type="text" id="addr2" name="addr2"> 지번주소
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="text" id="addr3" name="addr3">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="hp">휴대전화</label></th>
+                                <td>
+                                    <select name="hp" id="hp">
+                                        <option value="010">010</option>
+                                        <option value="011">011</option>
+                                    </select>
+                                    <input type="text" id="hp1" name="hp1">
+                                    <input type="text" id="hp2" name="hp2">
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>SMS수선여부</th>
+                                <td>
+                                    <p>
+                                        <input type="checkbox" value="ok" id="sms" name="sms"> 
+                                        <label for="sms">동의함</label>
+                                    </p>
+                                    <p>
+                                        이벤트 소식을 SMS으로 전해드립니다
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="emailid">이메일</label></th>
+                                <td>
+                                    <input type="text" id="emailid" name="emailid"> @ 
+                                            <input type="text" id="emaildomain" name="emaildomain" disabled>
+                                            <select id="domainlist">
+                                                <option value="noselect">-이메일선택-</option>
+                                                <option value="naver.com">네이버</option>
+                                                <option value="daum.net">다음</option>
+                                                <option value="self">직접입력</option>
+                                            </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>이메일수신여부</th>
+                                <td>
+                                    <p>
+                                        <input type="checkbox" value="ok" id="emailok" name="emailok"> 
+                                        <label for="emailok">동의함</label>
+                                    </p>
+                                    <p>
+                                        이벤트 소식을 이메일로 전해드립니다
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </fieldset>
+                <fieldset>
+                    <legend>추가정보</legend>
+                    <h3>추가정보</h3>
+                    <table>
+                        <colgroup>
+                            <col>
+                            <col>
+                            </colgroup>
+                        <tbody>
+                            <tr>
+                                <th>성별</th>
+                                <td>
+                                    <input type="radio" id="male" name="gender" value="m" > <label for="male">남자</label>
+                                    <input type="radio" id="female" name="gender" value="w"> <label for="female">여자</label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>생년월일</th>
+                                <td>
+                                    <input type="text" id="birth" name="birth">
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="lacal">지역</label></th>
+                                <td>
+                                    <select name="local" id="local">
+                                        <option>선택</option>
+                                        <option value="서울특별기">서울특별시</option>
+                                        <option value="경기도">경기도</option>
+                                        <option value="부산광역시">부산광역시</option>
+                                        <option value="대구광역시">대구광역시</option>
+                                        <option value="제주특별자치도">제주특별자치도</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="memo">메모</label></th>
+                                <td>
+                                    <textarea name="memo" id="" cols="30" rows="10" placeholder="메모를 적어주세요"></textarea>
+                                </td>
+                            </tr>
+                        </tbody>
+                       
+                    </table>
+                    <button type="submit">OK</button>
+                    <button type="reset">RESET</button>
+                </fieldset>
+            </form>
+        </div>
+
+
+
+
+    </section>
+    <footer id="footer">
+        <div class="row">
+            <span>소재지 : 서울시 강남구 강남대로 102-8 큐브빌딩 10층  /  대표자 : 홍길동  /  대표전화 : 1588-1588  /  팩스번호 : 1599-1599
+            </span>
+            <span>사업자등록번호 : 강남-가-000-0000  /  통신판매업신고 : 강남-허-00000  /  이메일 : <a href="#none">isle1@daum.net</a>
+            </span>
+            <span>Copyright 2017. All right reserved.</span>
+
+        </div >  
+        
+
+
+
+    </footer>
+
+
+
+
+
+
+    
+    <script src="js/common.js"></script>
+    <script src="js/join.js"></script>
+
+
+    <script>
+
+
+        // 우편번호 찾기
+    function kim() {
+        new daum.Postcode({
+        oncomplete: function(data) {
+            // 팝업에서 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+            // 도로명 주소의 노출 규칙에 따라 주소를 표시한다.
+            // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+            var roadAddr = data.roadAddress; // 도로명 주소 변수
+            var extraRoadAddr = ''; // 참고 항목 변수
+
+            // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+            // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+            if(data.bname !== '' && /[동|로|가]$/g.test(data.bname)){
+                extraRoadAddr += data.bname;
+            }
+
+
+
+        // 건물명이 있고, 공동주택일 경우 추가한다.
+        if(data.buildingName !== '' && data.apartment === 'Y'){
+               extraRoadAddr += (extraRoadAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+            }
+            // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+            if(extraRoadAddr !== ''){
+                extraRoadAddr = ' (' + extraRoadAddr + ')';
+            }
+
+            // 우편번호와 주소 정보를 해당 필드에 넣는다.
+            document.getElementById('zipcode').value = data.zonecode;
+            document.getElementById("addr1").value = roadAddr;
+            document.getElementById("addr2").value = data.jibunAddress;
+            
+            // 참고항목 문자열이 있을 경우 해당 필드에 넣는다.
+            if(roadAddr !== ''){
+                document.getElementById("addr3").value = extraRoadAddr;
+            } else {
+                document.getElementById("addr3").value = '';
+            }
+        }
+    }).open();
+}
+        
+        
+     
+    </script>
+
+
+</body>
+
+</html>

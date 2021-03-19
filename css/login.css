@@ -1,0 +1,223 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap');
+
+body {
+   font-family: 'Titillium Web', sans-serif;  
+}
+
+
+/* 공통 */
+.row {
+   max-width: 1140px;
+   margin: 0 auto;
+   padding: 0 20px;
+}
+
+h2 {
+   font-size: 40px;
+   color: #333;
+}
+
+.txt {
+   font-size: 14px;
+   color: #777;
+}
+h3 {color: #333;
+font-size: 20px;}
+
+.article2,
+.article3,
+.article4,
+.article5,
+.article6,
+.joinbox {
+   padding-top: 150px; padding-bottom: 150px;
+}
+/* header outer*/
+#header.on .outer {margin-top: -32px;}
+#header.on {position: fixed; width: 100%; top: 0; left: 0;
+background: #fff; z-index: 999999999;}
+
+#header .outer {
+    background:#181818;
+    color:#ddd;
+    font-size:12px; 
+    padding:12px 0px;
+    letter-spacing:-0.5px;
+    transition: all 0.3s;
+}
+#header .sns { float:left }
+#header .sns a { padding-right:20px }
+#header .membership { float:right }
+#header .membership a { padding-left:20px;
+    position:relative }
+   #header .membership a:last-child { padding-right:10px;}
+#header .membership a::after {
+    content:'';
+    width:1px; background:rgba(255,255,255,0.7);
+    position:absolute; top:3px; bottom:2px;
+    right:-10px; cursor:default; }
+#header .membership a:last-child::after {
+    display:none
+}
+
+
+
+#header .outer a:hover { color:rgba(255,255,255,1) }
+
+/* header */
+#header {
+   position: fixed;
+   width: 100%; top: 0; left: 0;
+   padding: 0px 0px;
+   z-index: 999;
+   transition: all 0.3s;
+}
+
+#header.on {position: fixed; width: 100%;    padding: 5px 0px;
+   top: 0; left: 0;
+   background: url(../img/삼각패턴.jpg); z-index: 10000;
+}
+   
+#header.on h1 {
+    font-size: 21px;
+   
+
+   }
+
+.hambar {display: none;}
+
+h1 {
+   float: left;
+   font-size: 28px;
+   color: #fff;
+   font-weight: 600;
+   padding: 20px 0px;
+   transition: all 0.3s;
+}
+
+h1:hover {
+   color: #617fde;
+}
+
+#header .nav {
+   float: right;
+   padding: 10px;
+}
+
+#header .nav .depth1 {
+   font-size: 15px;
+   color: #fff;
+}
+#header.on .nav .depth1 {
+   font-size: 16px;
+
+}
+
+#header .nav .depth1 > li:hover a{
+   color: #617fde; 
+}
+
+#header .nav .depth1>li {
+   float: left;
+   padding: 15px;
+   transition: all 0.1s;
+}
+#header .nav .depth1>li:last-child {
+   padding-right: 0px;
+
+}
+
+
+
+/* 섹션구역 */
+/* 아티클1 */
+#section .article1 .slide1 {
+   background: url(../img/main2.jpeg) no-repeat;
+   background-size: cover;
+   height: 345px;
+   position: relative;
+}
+#section .article1 .slide2 {
+   background: url(../img/main4.jpg) no-repeat;
+   background-size: cover;
+   height: 345px;
+   position: relative;
+}
+
+.article1 .main_txt {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   color: #fff;
+   font-size: 22px;
+   line-height: 1.5;
+   margin-top: 20px;
+}
+
+.article1 .main_txt span {
+   font-size: 50px;
+   font-weight: 500;
+}
+.article1 .slide-group .slick-arrow {
+   position:absolute; top:50%; transform:translateY(-50%);
+   background:none; border:none;
+   color:#fff; font-size:5px; color: transparent;
+}
+.article1 .slide-group .prev { left:50px; z-index:9999; }
+.article1 .slide-group .next { right:50px; }
+
+.article1 .slide-group .slick-dots {
+    position:absolute; bottom:20px; width:100%; text-align:center;
+}
+.article1 .slide-group .slick-dots li {
+   display:inline-block; margin:0 5px
+}
+.article1 .slide-group .slick-dots li button {
+   width:50px; height:5px; background:#ddd;
+   border:none; color:transparent; vertical-align:middle;
+}
+.article1 .slide-group .slick-dots li.slick-active button {
+   border:0.5px solid #ddd; background:none
+}
+
+
+
+/* 회원가입 */
+
+legend {display: none;}
+
+.loginbox { padding-top:80px; padding-bottom:80px }
+.loginbox h2 {margin-bottom: 50px;}
+.loginbox .loginout {
+    border:  1px solid #ddd;
+    margin: 40px 0  20px ;
+    padding:  67px 0;
+    text-align: center;
+}
+
+.loginbox .loginout div { display: inline-block; vertical-align: middle;}
+.loginbox .loginout label { display: inline-block; vertical-align: middle;
+width: 80px; text-align: left;}
+.loginbox .loginout input { width:200px  ; height: 35px;
+    vertical-align: middle;}
+.loginbox .loginout p  { margin: 10px 0;}
+.loginbox .loginout button { width: 100px; height: 80px;
+    vertical-align: middle;margin-left: 10px; background: #facb0e;
+border: none; }
+.loginbox .loginout button:hover {background: #f3b406;}
+
+
+
+
+
+
+
+/* footer */
+
+#footer {height: 205px; background: #181818; color: #666;
+text-align: left; padding: 40px 0; font-size: 14px; line-height: 2.3;}
+#footer span {display: block;}
+#footer span > a {color: #617fde;}
+#footer span > a:hover {color: #facb0e;}
+
